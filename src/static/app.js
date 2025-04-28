@@ -25,8 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
+          <ul>
+            ${details.participants.map(participant => `<li>${participant}</li>`).join("")}
+          </ul>
         `;
-
+        console.log("activityCard", activityCard);
         activitiesList.appendChild(activityCard);
 
         // Add option to select dropdown
